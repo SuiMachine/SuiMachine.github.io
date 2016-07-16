@@ -25,6 +25,18 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
+		  
+		  {% if site.twitch_username %}
+          <li>
+            {% include icon-twitch.html username=site.twitch_username %}
+          </li>
+          {% endif %}
+		  
+		  {% if site.pcgw_username %}
+          <li>
+            {% include icon-pcgw.html username=site.pcgw_username %}
+          </li>
+          {% endif %}
         </ul>
       </div>
 
