@@ -1,0 +1,19 @@
+# A GitHub blog of SuiMachine.
+# This whole page was made with Jekyll.
+
+# Site settings
+title: SuiMachine blog
+description: > # this means to ignore newlines until "baseurl:"
+  A GitHub blog of SuiMachine.
+  This whole page was made with Jekyll.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://suimachine.github.io" # the base hostname & protocol for your site
+twitter_username: Suicide_pl
+github_username:  SuiMachine
+
+# Build settings
+markdown: kramdown
+
+# Variables
+limit_posts: 10
+excerpt_separator: <!--more-->
