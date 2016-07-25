@@ -1,5 +1,5 @@
 ---
-layout: unlistedpage
+layout: page
 title: Copypasta vault
 menu: none
 permalink: /copypasta/
