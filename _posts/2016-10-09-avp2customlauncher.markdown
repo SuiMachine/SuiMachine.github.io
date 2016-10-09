@@ -14,8 +14,6 @@ Here are some screenshots:
 
 ![menu_02.png](/images/avp2customlauncher/menu_01.png)
 
-[Read more]({{post.url}})
-
 <!--more-->
 
 ![menu_02.png](/images/avp2customlauncher/menu_02.png)
