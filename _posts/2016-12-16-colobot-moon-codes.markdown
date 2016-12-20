@@ -103,6 +103,7 @@ extern void object::DoIt()
 
 extern void safedrop()
 {
+	//We surpress the error
 	errmode(0);
 	try
 	{
@@ -116,6 +117,7 @@ extern void safedrop()
 
 extern void object::gotoSafe(point pos)
 {
+	//We surpress the error
 	errmode(0);
 	try
 	{
@@ -207,6 +209,7 @@ extern void PointAt(float dir)
 {% highlight cs %}
 extern void object::DoIt()
 {
+	//Initialize exchange class
 	ex list();
 	
 	object item = radar(Titanium);
@@ -228,11 +231,16 @@ extern void object::DoIt()
 	turn(90);
 	move(-5);
 	wait(14);
+	
+	//This should be done more dynamically
 	list.whGrabberNeedsEnergy = true;
+	
+	//Wait till you are refueled
 	while(list.whGrabberNeedsEnergy)
 	{
 		wait(1);
 	}
+	//Get titanium ore, convert it, build radar station, go to a ship, set the flag that you're ready to leave
 	item = radar(TitaniumOre);
 	goto(item.position);
 	grab();
@@ -264,13 +272,19 @@ extern void object::DoItW()
 {
 	object spaceShip = radar(SpaceShip);
 	
+	//Initialize exchange list that can be accessed by other bots
 	ex list();
+	
+	//Find the other bot
 	object secondBot = radar(WheeledGrabber);
+	
+	//Wait till the other bot doesn't send the "whGrabberNeedsEnergy" to true in our ex class
 	while(!list.whGrabberNeedsEnergy)
 	{
 		wait(1);
 	}
 	
+	//Find Titanium Cube, get it, build Power station
 	object item = radar(Titanium);
 	move(-5);
 	goto(item.position);
@@ -278,12 +292,18 @@ extern void object::DoItW()
 	goto(buildSpace());
 	drop();
 	build(PowerStation);
+	
+	//We store it, because it's useful
 	object pwStation = radar(PowerStation);
 	goto(pwStation.position);
+	
+	//Wait till we fully charged
 	while(this.energyCell.energyLevel != 1)
 	{
 		wait(1);
 	}
+	
+	//Go to 2nd bot, grab its powercell, to to PowerStation, charge it, return it to 2nd bot, set its flag to false, so it continues working
 	goto(secondBot.position);
 	grab();
 	goto(pwStation.position);
@@ -295,6 +315,7 @@ extern void object::DoItW()
 	drop();
 	list.whGrabberNeedsEnergy = false;
 	
+	//Go to blackbox, bring it to the ship
 	object blackBox = radar(BlackBox);
 	goto(blackBox.position);
 	grab();
@@ -309,6 +330,7 @@ extern void object::DoItW()
 
 extern void object::basicGoto(point whereTo, float altitude)
 {
+	//This is a basic function which makes the bot go in a straight line to specified point, since "goto()" does some checks and usually throws an error
 	while(distance2d(this.position, whereTo) > 1)
 	{
 		if(this.temperature > 0.8)
@@ -357,31 +379,14 @@ extern void object::basicGoto(point whereTo, float altitude)
 
 extern point buildSpace()
 {
+	//Find a closes free flat space from a ship
 	object item = radar(SpaceShip);
 	flatspace(item.position, 5, 10, 100, 5);
 }
 
-
-point findPointAccordingToSpaceShip(object obj)
-{
-	object sp = radar(SpaceShip);
-	float xDif = obj.position.x - sp.position.x;
-	float yDif = obj.position.y - sp.position.y;
-	float angle = atan2(xDif, yDif);
-	message(angle);
-	float xPos = sp.position.x + 25 * sin(angle);
-	float yPos = sp.position.y + 25 * cos(angle);
-	point pt;
-	pt.x = xPos;
-	pt.y = yPos;
-	pt.z = topo(pt);
-	message(pt.x + " " + pt.y + " " + pt.z);
-	return pt;
-}
-
-
 public class ex
 {
+	//This is an exchange class, which is publically available for all bots. Issue is, it will crash the game if it hasn't be initialized in current session (so if you load and program of a bot tries to access it - the game will crash)
 	public static bool whGrabberNeedsEnergy = false;
 	public static bool whGrabberReadyToLeave = false;
 }
@@ -390,6 +395,7 @@ point getSpaceOnAShip()
 {
 	object sp = radar(SpaceShip);
 	
+	//This basically creates a list of objects that can be on the ship
 	int obj[];
 	int i=0;
 	obj[i++] = TitaniumOre;
@@ -427,6 +433,7 @@ point getSpaceOnAShip()
 	obj[i++] = PhazerShooter;
 	obj[i++] = Me;
 	
+	//This section specifies free spots on the ship (you know, the squares)
 	point[] spaces;
 	spaces[0].x = sp.position.x -3.5;
 	spaces[0].y = sp.position.y -3.5;
@@ -452,6 +459,7 @@ point getSpaceOnAShip()
 	spaces[7].x = sp.position.x + 3.5;
 	spaces[7].y = sp.position.y + 3.5;
 	
+	//We check if any of these is free by checking if any of listed objects is located in 2m radius
 	for(i=0; i<8; i++)
 	{
 		bool taken = false;
@@ -464,6 +472,8 @@ point getSpaceOnAShip()
 		if(!taken)
 		    return spaces[i];
 	}
+	
+	//If all of them are taken, we return a point -1337, -1337
 	point empty (-1337, -1337);
 	return empty;
 }

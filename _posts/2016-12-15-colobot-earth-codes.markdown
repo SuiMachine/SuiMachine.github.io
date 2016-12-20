@@ -49,20 +49,28 @@ extern void object::DoIt()
 	goto(item.position);
 	drop();
 	move(-5);
+	
+	//Wait till the Tracks for Bots are researched
 	while(!researched(ResearchTracked))
 	{
 		wait(1);
 	}
+	
+	//Prapre reading the code from a file
 	file handle();
 	handle.open("getCubeToShip.txt", "r");
 	
+	//Read the file till the end
 	string o_str = "";
 	while(not handle.eof())
 	{
 		o_str += handle.readln() + "\n";
 	}
 	
+	//Tell the factory to construct TrackedGrabber and send it the code we've read
 	item.factory(TrackedGrabber, o_str);
+	
+	//Get the PowerCell and place it in TrackedGrabber when it's built
 	item = radar(PowerCell);
 	goto(item.position);
 	grab();
@@ -81,6 +89,7 @@ extern void object::DoIt()
 {% highlight cs %}
 extern void object::GetBlackBox()
 {
+	//Basic goto function - nothing to explain. Get Blackbox to a ship
 	object item = radar(BlackBox);
 	goto(item.position);
 	grab();
