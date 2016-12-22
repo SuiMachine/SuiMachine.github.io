@@ -28,4 +28,8 @@ Apparently all the games that use heavy mechanics have been served to male inter
 It's hilarious u kids talking shit about Catalyst. u wouldn't say shit to him at lan, he's jacked. Not only that be he wears the freshest clothes, eats at the chillest restaurants and hangs out with the hottest dudes. yall are pathetic lol
 I'd like to remind you that Star Wars games in general have no good audio balancing.
 What do you find in the Captain's bathroom? The Captain's log SoonerLater
+O-oooooooooo AAAAE-A-A-I-A-U-JO-oooooooooooo AAE-O-A-A-U-U-A-E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAAA
+OllieNK a fruit Pokemon, normally seen around speed running here and there, maybe some casual stuff you never know with him. If Tampered with he gets flustered and will attack at will!
+Sexual acts are described on the basis of your state of dress or undress in combination with Deanna's state of dress or undress. This is then applied to her current position (standing, on all fours, etc.).
+I'm not against the idea of speed-runs, I think they're a fun idea for some games. But why do people think that any exploit that gets you somewhere faster makes a speedrun legal? "Oh look I finished Half Life 2 in 10 minutes I AM THE KING!" ... um, no, you just used some exploit to get to the end really fast. That's not skillful.
 ```
