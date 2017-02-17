@@ -32,4 +32,5 @@ O-oooooooooo AAAAE-A-A-I-A-U-JO-oooooooooooo AAE-O-A-A-U-U-A-E-eee-ee-eee AAAAE-
 OllieNK a fruit Pokemon, normally seen around speed running here and there, maybe some casual stuff you never know with him. If Tampered with he gets flustered and will attack at will!
 Sexual acts are described on the basis of your state of dress or undress in combination with Deanna's state of dress or undress. This is then applied to her current position (standing, on all fours, etc.).
 I'm not against the idea of speed-runs, I think they're a fun idea for some games. But why do people think that any exploit that gets you somewhere faster makes a speedrun legal? "Oh look I finished Half Life 2 in 10 minutes I AM THE KING!" ... um, no, you just used some exploit to get to the end really fast. That's not skillful.
+"So the tip is, don’t lose hope, everything may be fucked up now but guess what, everything’s gonna BE FUCKING FINE NO ITS NOT GOD DAMMIT FUCK LIFE IS AWFUL YOU’RE ALL GONNA DIE AT THE END OF IT ITS FUCKING TERRIBLE YOU MIGHT AS WELL JUST KILL YOURSELF NOW FUCK" - arctc
 ```
