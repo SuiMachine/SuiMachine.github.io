@@ -2,7 +2,7 @@
 layout: post
 title:  "Colobot - minimum human input - Moon Codes"
 date:   2016-12-06 01:44:00 +0200
-categories: colobot
+categories: Colobot
 ---
 
 

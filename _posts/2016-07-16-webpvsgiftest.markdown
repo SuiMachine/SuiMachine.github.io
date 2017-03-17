@@ -2,7 +2,7 @@
 layout: post
 title:  "WebP vs GIF test"
 date:   2016-07-16 20:41:00 +0200
-categories: tests
+categories: Tests
 ---
 For a long time, I haven't been a fan of Gif as a format. Yes it serves its purpose, but for me - it's clearly outdated and while many websites kind of bypass it's limitations, when displaying animations, by using formats like FLV and WEBM - which are movie formats, I thought, I'd for once show some power of WebP - especially that I've written a simple GUI to make converting animations from image sequence to WebP, easier and avoid using GIF on the way.
 ![bitdepth_24bpp_580.png](/images/webpvsgif/bitdepth_24bpp_580.png)

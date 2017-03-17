@@ -2,7 +2,7 @@
 layout: post
 title:  "A bit of work on AVP2 Custom Launcher"
 date:   2016-10-09 04:05:00 +0200
-categories: developement
+categories: Developement
 ---
 Since I created this pointless blog, I thought I may write something, so that it's not just showing off WebP being superior to Gif. In the past 3 days, I've spent plenty of time learning how to do code injection and reworking my AVP2 Custom Launcher to use that method.
 

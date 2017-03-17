@@ -2,7 +2,7 @@
 layout: post
 title:  "Colobot - minimum human input - Earth Codes"
 date:   2016-12-05 08:41:00 +0200
-categories: colobot
+categories: Colobot
 ---
 
 
