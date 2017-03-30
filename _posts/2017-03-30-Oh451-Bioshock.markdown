@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "0451 Vault - BioShock (2007)"
+date:   2017-03-30 17:50:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "bioshock.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+It's a spiritual successor to System Shock... or at least it tries to be, so naturally it has to reference 451 - again, as a door code.
