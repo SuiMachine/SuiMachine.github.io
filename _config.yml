@@ -16,5 +16,5 @@ pcgw_username:  Suicide_Machine
 markdown: kramdown
 
 # Variables
-limit_posts: 10
+limit_posts: 0
 excerpt_separator: <!--more-->

@@ -7,15 +7,10 @@ layout: default
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2><br/>
-		<h5>{{ post.excerpt }}</h5>
-		
+    {% for post in site.posts limit:10 %}
+      <li><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+		<h5>{{ post.excerpt }}</h5>		
 		{% capture content_words %} 
 		{{ post.content | number_of_words }} 
 		{% endcapture %} 
@@ -25,11 +20,12 @@ layout: default
 		{% if excerpt_words != content_words %}
 		<a href="{{ post.url }}">Read more...</a>
 		{% endif %}
-
+		<hr color="#D0D0D0">
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <center><h1 class="page-heading">For more posts check <a href="archive/">archive</a>.</h1></center>
+  
+  <br /><br /><p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
