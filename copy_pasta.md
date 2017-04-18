@@ -36,4 +36,6 @@ I'm not against the idea of speed-runs, I think they're a fun idea for some game
 And of course, my own personal favorite of all time, man falling off of a cliff. Nooooooooooooooooooooooooo....... puf!
 According to all known RRRRR of rrrrrr, there is no way a ЯRrrR should be able to rRRR. Its RRrrЯЯrrRR are too rRRRRr to get its fat little RrrRrrR off the rrrrRrr. The RRrrr, of course, rRrRЯRRs anyway because rRrRrR don't care what humans think is ЯЯRЯЯЯЯ.
 In other words, the components of a vector transform contravariantly (with respect to the inverse) under a change of basis by the nonsingular matrix A. The contravariance of the components is notationally designated by placing the indices in the upper position.
+🐢 SLOW AND STEADY 🐢 WINS THE RACE 🐢 MODS CAN'T BAN ME 🐢 AT THIS PACE 🐢
+Sodium, atomic number 11, was first isolated by Humphry Davy in 1807. A chemical component of salt, he named it Na in honor of the saltiest region on earth, North America.
 ```
