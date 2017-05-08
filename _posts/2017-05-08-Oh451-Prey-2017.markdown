@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "0451 Vault - Prey (2017)"
+date:   2017-05-08 13:55:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "prey2017_1.jpg" %}
+{% assign img04512 = "prey2017_2.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+[![{{ img04512 }}](/images/0451/{{ img04512 }})](/images/0451/{{ img04512 }})
+
+So reboot of Prey tried in many ways be like Bioshock and System Shock and whilst it was a bit of hit and miss, it did also feature 0451 easter egg.
+
+Also, special shoutouts to 0451 speedrunning team and especially to [CoolsVilla](https://www.twitch.tv/coolsvilla) for providing the screenshots.
