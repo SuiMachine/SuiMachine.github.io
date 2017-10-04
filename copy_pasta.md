@@ -35,7 +35,10 @@ I'm not against the idea of speed-runs, I think they're a fun idea for some game
 "So the tip is, don’t lose hope, everything may be fucked up now but guess what, everything’s gonna BE FUCKING FINE NO ITS NOT GOD DAMMIT FUCK LIFE IS AWFUL YOU’RE ALL GONNA DIE AT THE END OF IT ITS FUCKING TERRIBLE YOU MIGHT AS WELL JUST KILL YOURSELF NOW FUCK" - arctc
 And of course, my own personal favorite of all time, man falling off of a cliff. Nooooooooooooooooooooooooo....... puf!
 According to all known RRRRR of rrrrrr, there is no way a ЯRrrR should be able to rRRR. Its RRrrЯЯrrRR are too rRRRRr to get its fat little RrrRrrR off the rrrrRrr. The RRrrr, of course, rRrRЯRRs anyway because rRrRrR don't care what humans think is ЯЯRЯЯЯЯ.
+I'm praskoo, and this is my rrrrrr shop. I work here with my rrrrrr and my rrr, RRRRRRRRR. Everything in here has a rrrrrrrrrr and a rrrrrrrrrrr. One thing I've rrrrrrrrr after 21 yearrrrr rrrr r rrr rr u nerrrrrrrw WHATRRRR is RRRRRRRRRRRRR tRRRRrRRough TRRhARRT doRRRRRRRRRRR
 In other words, the components of a vector transform contravariantly (with respect to the inverse) under a change of basis by the nonsingular matrix A. The contravariance of the components is notationally designated by placing the indices in the upper position.
 🐢 SLOW AND STEADY 🐢 WINS THE RACE 🐢 MODS CAN'T BAN ME 🐢 AT THIS PACE 🐢
 Sodium, atomic number 11, was first isolated by Humphry Davy in 1807. A chemical component of salt, he named it Na in honor of the saltiest region on earth, North America.
+Yea speedruns should not be about how fast you go but how flashy looks. I would love to see a run that is nothing but "swag strats" and "sick moves" without them speedrunning is dull and boring and as a viewer if I am bored I will not watch and without me your sport would be dead.
+I guess SDA is the MC Hammer of speedrunning
 ```
