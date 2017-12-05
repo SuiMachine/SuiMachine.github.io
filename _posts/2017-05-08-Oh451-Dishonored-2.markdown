@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "0451 Vault - Dishonored 2 (2016)"
+date:   2017-12-05 15:15:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "dishonored2_1.jpg" %}
+{% assign img04512 = "dishonored2_2.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+[![{{ img04512 }}](/images/0451/{{ img04512 }})](/images/0451/{{ img04512 }})
+
+Just like in first game, this one is also for the safe. This time however, it's very possible, you can miss the safe it's for, as it's a bit off the way. It's in the building on the left side of a street in the Dunwall Streets level. Code is hidden behind the painting, that you steal.
