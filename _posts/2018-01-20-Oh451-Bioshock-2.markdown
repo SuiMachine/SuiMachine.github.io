@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "0451 Vault - Bioshock 2 (2017)"
+date:   2018-01-20 01:42:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "bioshock2.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+Highly anticipated sequel to Bioshock, also featured 451 easter egg as a code to the first secured door you can encounter, although reversed to 1540.
