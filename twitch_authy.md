@@ -38,7 +38,6 @@ for(i=0; i<splt.length; i++)
        var helper = splt[i].split("=");
        scopes = helper[1];
    }
-   
 }
 
 document.getElementById("ac").innerHTML = "<b>Access token is:</b> " + acctok;
