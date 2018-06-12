@@ -14,7 +14,14 @@ permalink: /web_projects/vision_fov_calculator/
 
 <br/>
 <h3>Known games (unsupported):</h3>
+* Demonicon
 * Emergency 3
 * Emergency 2012
 * Gotcha!
 * Back to Gaya
+
+<h3>Known games that don't need calculator:</h3>
+* Arcania: Gothic 4
+
+<h3>Known games with FOV slider:</h3>
+* Dark
