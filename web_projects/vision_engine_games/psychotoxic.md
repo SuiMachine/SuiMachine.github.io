@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Vision Engine FOV calculator (Emergency 4)
+title: Vision Engine FOV calculator (Psychotoxic)
 menu: none
-permalink: /web_projects/vision_fov_calculator/emergency4
+permalink: /web_projects/vision_fov_calculator/Psychotoxic
 ---
 Desired Horizontal FOV (for 4:3 aspect ratio): <input type="number" id="desiredFOV" min="10" max="351" value="90" autofocus /> <button onclick="calculateFOV()">Calculate</button>
 
@@ -10,7 +10,7 @@ Desired Horizontal FOV (for 4:3 aspect ratio): <input type="number" id="desiredF
 <script>
 function calculateFOV() {
 	var f_desiredFOV = parseFloat(document.getElementById("desiredFOV").value);
-	var f_Result = 160 / Math.tan(f_desiredFOV/ 114.59155);
+	var f_Result = 160 / Math.tan(3.1415927 * 0.0027777778 * f_desiredFOV);
     document.getElementById("results").innerHTML = "<b>Your FOV config value is:</b> <u>" + f_Result + "</u>";
 }
 
@@ -38,4 +38,6 @@ calculateFOV();
 </script>
 
 Formula:
-<pre>ConfigsFOV = 160 / tan(HorizontalFOV / 114.59155)</pre>
+<pre>ConfigsFOV = 160 / tan(Pi / 0.0027777778 * HorizontalFOV)</pre>
+
+<h1>There doesn't seem to be an easy way to apply new FOV</h1>
