@@ -2,7 +2,7 @@
 layout: page
 title: Vision Engine FOV calculator (Psychotoxic)
 menu: none
-permalink: /web_projects/vision_fov_calculator/Psychotoxic
+permalink: /web_projects/vision_fov_calculator/psychotoxic
 ---
 Desired Horizontal FOV (for 4:3 aspect ratio): <input type="number" id="desiredFOV" min="10" max="351" value="90" autofocus /> <button onclick="calculateFOV()">Calculate</button>
 
