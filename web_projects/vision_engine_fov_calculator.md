@@ -67,7 +67,6 @@ Formula:
 <h3>Known games (unsupported):</h3>
 * Lula 3D
 * Demonicon
-* Emergency 3
 * Emergency 2012
 * Gotcha!
 * Back to Gaya
