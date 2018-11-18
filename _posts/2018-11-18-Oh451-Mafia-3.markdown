@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "0451 Vault - Mafia 3 (2017)"
+date:   2018-11-18 23:04:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "mafia_3.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+In an easter egg that pretty much nobody saw coming, in a cutscene related to one of the underbosses we need to kill, he reveals to one of his new goons, that the key to his elevator is 0451. WHAT A TWIST!
