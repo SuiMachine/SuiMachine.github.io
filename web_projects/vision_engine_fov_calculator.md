@@ -2,7 +2,7 @@
 layout: page
 title: Vision Engine FOV calculator
 menu: none
-permalink: /web_projects/vision_fov_calculator/
+permalink: web_projects/vision_fov_calculator/
 ---
 <link rel="stylesheet" href="{{ base }}/css/game-grid.css">
 <h3>Tested games (click to load default FOV for a game):</h3>
