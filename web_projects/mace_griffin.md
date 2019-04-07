@@ -4,8 +4,7 @@ title: Mace Griffin Bounty Hunter FOV calculator
 menu: none
 permalink: web_projects/mace_griffin_fov_calculator/
 ---
-<link rel="stylesheet" href="{{ base }}/css/game-grid.css">
-<p>Desired Horizontal FOV: <input type="number" id="desiredFOV" min="10" max="351" value="64.01579624" autofocus /> <button onclick="calculateFOV()">Calculate</button></p>
+<p>Desired Horizontal FOV: <input type="number" id="desiredFOV" min="10" max="351" value="64" autofocus /> <button onclick="calculateFOV()">Calculate</button></p>
 <p>Screen Width x Height: <input type="number" id="screenX" value="1024" style="width: 65px"/> x <input type="number" id="screenY" value="768" style="width: 65px"/>
 
 
