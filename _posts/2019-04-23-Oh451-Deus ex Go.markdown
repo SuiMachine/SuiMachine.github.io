@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "0451 Vault - Deus Ex Go (2016)"
+date:   2019-04-23 16:30:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "deus_ex_go.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+Even this little puzzle tie-in to Deus Ex, had to feature it... of course!
+
+Also thanks [Jelmeree](https://www.twitch.tv/jelmeree) for the image.
