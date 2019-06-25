@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sui\'s Internet Hall of Fame - Some publishers get it"
+title:  Sui's Internet Hall of Fame - Some publishers get it
 date:   2019-01-31 13:10:00 +0200
 categories: [Hall Of Fame]
 ---

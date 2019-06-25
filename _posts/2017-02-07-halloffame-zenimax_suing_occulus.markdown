@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sui\'s Internet Hall of Fame - Occulus vs Zenimax"
+title: Sui's Internet Hall of Fame - Occulus vs Zenimax
 date:   2017-02-07 14:00:00 +0200
 categories: [Hall Of Fame]
 ---

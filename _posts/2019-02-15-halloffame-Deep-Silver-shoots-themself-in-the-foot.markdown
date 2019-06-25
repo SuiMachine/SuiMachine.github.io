@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sui\'s Internet Hall of Fame - Deep Silver shoots themselves in the foot"
+title:  Sui's Internet Hall of Fame - Deep Silver shoots themselves in the foot
 date:   2019-02-15 19:20:00 +0200
 categories: [Hall Of Fame]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sui\'s Internet Hall of Fame - Bioware vs. Bored anon"
+title:  Sui's Internet Hall of Fame - Bioware vs. Bored anon
 date:   2017-03-17 18:00:00 +0200
 categories: [Hall Of Fame]
 ---

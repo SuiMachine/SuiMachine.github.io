@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sui\'s Internet Hall of Fame - Armpit Hair"
+title:  Sui's Internet Hall of Fame - Armpit Hair
 date:   2018-01-08 02:20:00 +0200
 categories: [Hall Of Fame]
 ---
