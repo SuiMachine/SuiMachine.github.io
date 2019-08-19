@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "0451 Vault - ATOM RPG: Post-apocalyptic indie game (2018)"
+date:   2019-08-19 17:00:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "AtomRPG.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+This little, but ambitious isometric cRPG also decided to pay a little tribute with this easter egg found in the tutorial of the game.
+
+Also thanks to TrakkDay for info.
