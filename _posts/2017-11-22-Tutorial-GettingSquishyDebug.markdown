@@ -16,3 +16,7 @@ So here is a short tutorial on how to get Squishy the Suicidal Pig v 1.0.0.5. Ke
 5. Navigate to a folder displayed in YOUR Steam console.
 6. Copy folders __bin__ and __mac__
 7. Move them to a folder where current version of Squishy is installed and __override__ all files.
+
+# Update
+After recent Steam updates, additional steps are required, as described in this image:
+![steam_update_depot_garbage.png](/images/steam_update_depot_garbage.png)
