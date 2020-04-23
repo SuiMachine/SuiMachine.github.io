@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "0451 Vault - NITE Team 4 (2019)"
+date:   2020-04-23 03:00:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "nite_team4.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+Found during one of the last training missions in the game. Still personally, I do not recommend this getting hacking adventure game - it's not very good.
