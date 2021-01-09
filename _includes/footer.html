@@ -26,6 +26,12 @@
           </li>
           {% endif %}
 		  
+		  {% if site.parler_username %}
+          <li>
+            {% include icon-parler.html username=site.parler_username %}
+          </li>
+          {% endif %}
+		  
 		  {% if site.twitch_username %}
           <li>
             {% include icon-twitch.html username=site.twitch_username %}
