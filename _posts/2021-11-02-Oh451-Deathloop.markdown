@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "0451 Vault - Deathloop (2021)"
+date:   2021-10-02 22:00:00 +0100
+categories: ["0451"]
+---
+{% assign img0451 = "death_loop.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+While this game by Arcane Studios doesn't use 0451 code for any of its keypads, trying to input 0451 instead results in achievement being unlocked. Not bad.
