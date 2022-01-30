@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "0451 Vault - Filcher (2021)"
+date:   2022-01-30 12:30:00 +0100
+categories: ["0451"]
+---
+{% assign img0451 = "filcher.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+Filcher is a small Thief-inspired first person stealth game developed by Johan Hjärpe. In one of the later missions, you get to visit our protagonist's appartment and in it and obtain the equipement in the hiden closet. The code to the closet being 451.
