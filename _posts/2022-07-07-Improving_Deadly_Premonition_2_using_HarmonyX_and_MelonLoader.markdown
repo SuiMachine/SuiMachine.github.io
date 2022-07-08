@@ -437,3 +437,5 @@ A proper keyboard and mouse support on a PC is pretty much a must, with very few
 If anything, with my hack - I hope I managed to at least prove that Unity is a very flexible engine and drastic shortcomings that you usually see, are either the fault of developers or (more often than not) insufficient resources and bad management.
 
 And yes, I could have probably converted the camera to work in VR - but that would be stupid. See my [Art of Rally VR Hack](https://github.com/SuiMachine/Art-Of-Rally-VR-Hack) or [Raicuparta's guide](https://www.youtube.com/watch?v=Gt_kIrmTl44).
+
+The current version of my Deadly Premonition 2 hack you can find [here](https://github.com/SuiMachine/Deadly-Premonition-2---Sui-s-hack/releases).
