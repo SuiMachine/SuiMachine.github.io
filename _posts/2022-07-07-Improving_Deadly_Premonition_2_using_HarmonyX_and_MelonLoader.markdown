@@ -173,12 +173,14 @@ public class ExampleBehaviour : MonoBehaviour
 
 There are a few other quirks. ``obj.GetType()`` won't work for example and ``UnhollowerRuntimeLib.Il2CppType.Of<T>()`` or ``obj.GetIl2CppType()`` have to be used. Coroutines require running using ``MelonCoroutines.Start(__coroutine__here__);``. A good point of reference is [MelonLoader's wiki](https://melonwiki.xyz/#/modders/il2cppdifferences).
 
-What to fix
+Fixing stuff - FixedUpdates and Character interpolation
 ---
 Deadly Premonition 2 has planty of things to fix - one, already mentioned, which relates to resolution, I have already covered. The other common complaint was the character movement which seems to be stuttering. This is a common problem with many Unity games, as the developers opted to handle its movement using FixedUpdate - the characteristing of which is that, it is not tied with the renderered framerate and instead suppose to run a fixed amount of time per second. The amount of updates per second can be configured in Unity, but most games use a value of 50 times a second (delta time of 0.02) and so does DP2. This isn't too much of a problem on Switch (which runs badly as it is), but on PC, where obtaing a framerate of 60 or even higher is pretty much a standard - this ends up being noticable. If you need a graphical examples, I recommend checking "[Fix jittery camera movement in Unity with Rigidbody Interpolate](https://blog.terresquall.com/2021/12/fix-jittery-camera-movement-in-unity-with-rigidbody-interpolate/)" at Terresquall Blog's or "[Timesteps and Achieving Smooth Motion in Unity](https://www.kinematicsoup.com/news/2016/8/9/rrypp5tkubynjwxhxjzd42s3o034o8)" at Kinematic Soup's blog.
 
 To fix that issue, I have decided to write 2 mono behaviours. One, which gets attached to objects that needs to be interpolated, which writes down their position in fixed updates and one which gets attached to the camera, which actually does the interpolation, by disabling rigid bodies, storing their original position and rotation before the frame gets rendered in ``OnPreCull`` method, then after the frame gets rendered, moving them back to their original positions, restoring velocities and state in ``OnPostRender`` (this only works when monobehaviour is attached to a gameobject that has a camera). It also allowed me to easily control for situations, where not to use interpolation (for example during cutscenes), by simply setting flags inside the component responsible for interpolation inside the camera. There was one major bug related to it (and one I was not able to fix), which caused York to start hovering at times and prevent him from falling, which I bypassed by just adding a gravity acceleration if Y velocity was 0.
 
+Fixing stuff  - Controller prompts + keyboard and mouse support
+---
 Another element that needed fixing was gamepad prompts. The original bindings are just confusing and counter intuitive, as the "Cancel" button for menu is by default bound to Xbox's A, instead of "B" like it is the unspoken standard (or occasionally X). Since the game uses SteamInput, it is possible to just flip those via Steam, but that leaves us with a situation where prompts are no incorrect. So, to fix that issue, issue I had to hook a component responsible for displaying prompts. I was originally expecting the game just to use standard Unity UI (as that has been introduced I think in 2014 to Unity), but - for whatever reason and to my surprise - it turned out the game uses a third party component NGUI. This was a problem, as to replace those prompts, I needed to find an older version of NGUI (as the most recent version of NGUI uses different atlasses), but also not the "Free" version, which turned out to be way too old. I managed to do so and after preparing proper atlases in Unity 2018.
 
 [![ngui.png](/images/articles/deadlypremonition2/ngui.png)](/images/articles/deadlypremonition2/ngui.png)
@@ -317,3 +319,117 @@ I tried also prevent SteamInput from initiating, but sadly it seems like for the
 
 To make PC input at least slightly more bareable, I do try and detect game state (namely whatever the player is in menu, in normal gameplay, looking at the map etc.) and then swap input and keyboard/mouse prompts on the fly. For example - when looking at the map, on the controller, you'd normally be using left stick to move the pointer (in the middle of the screen) and press A (or B) to set a waypoint. If translated directly to keyboard and mouse, that would mean using a map with WSAD and pressing E to set a waypoint marker. Instead, what I do is I swap inputs, so that mouse is used for moving the cursor and left mouse button is used for setting up a waypoint. Mouse wheel up and down can be used then to zoom in/zoom out the map (in addition to numpad + / numpad -).
 
+Fixing stuff  - Wires geometry
+---
+One of the things I have noticed quite early when playing the game, is that electrical wires seems to  disappear. At first I thought this was an issue with LOD Groups, but at further investigation it turned out to be something more trivial. You see, rendering elements is a complicated matter and one of the ways to speed it up, is to use more basic shapes to figure out whatever the elements (or their shadows) are visible on the screen. And some of the most basic ways to check, is to essentially put an entire model inside of a box, as the math requires to check if something is inside of the box or if any of the boxes faces are visible on the screen is fast and straightfoward.
+
+One issue is that wires are often not of a very unique lenghts - more or less the amount of lenght needed to connect point A with B (with a bit of an overhead to account for thermal expansion, poles moving slightly further and closer to each other in the wind etc.). So if you don't want to create seperate meshes and store them in game files for each connection between the poles, what can be used is either a fancy vertex shader that is going to strech one mesh (model) between 2 points or bones. Bones are nowadays an old technology - it started to be used in video games around 2000s (Half-Life famously prouded itself with having skeletal animations) and whilst the intention behind was generally to use it for organic shapes, nothing is stopping developers for applying it to elements like wires. This is exactly what the develoeprs of Deadly Premonition 2 did, as each wire is one and the same model, that is being transformed using a single bone going from point A to B.
+
+The problem is, Skinned meshes that are used to renderer models that are being transformed by bones need to have their bounding set up in a way, that during entire transformation, the model is inside that bounding box. Below is an example of how UnityChan's bounding box looks like for the part that encapsulates her skin (arm, part of chest and neck).
+
+[![bounding_box.png](/images/articles/deadlypremonition2/bounding_box.png)](/images/articles/deadlypremonition2/bounding_box.png)
+
+If I were to modify the models bounding box and in a way that it does no longer encapsulete the models arms, what will happen the moment, the camera does not see a models bounding box, it will stop rendering the model as well. This can be bypassed (although in not a very efficient way), by toggling "Update when Offscreen" in Skinned Mesh Renderer component. Instead I have decided to fix it the correct way, by simplying calculating the proper bounding box. I knew that the one of the ends of the wire is always rendered correctly and having a quick look at its bounding box coordinates, it turned out it has local position 0,0,0 (X,Y,Z). So all that was needed to do is calculate a box that encapsulates entire mesh from local position 0,0,0 to B and Unity makes operations like this very easy, thanks to its [InverseTransformPoint](https://docs.unity3d.com/ScriptReference/Transform.InverseTransformPoint.html) method as that automatically handles object orientations and scale in relation to each other.
+
+```cs
+public void OnEnable()
+{
+    var skinnedMeshes = GetComponentsInChildren<SkinnedMeshRenderer>(true);
+    for (int i = 0; i < skinnedMeshes.Length; i++)
+    {
+        var newBound = new Bounds();
+
+        var skinnedMesh = skinnedMeshes[i].transform;
+        var objectsToEnapsulateParent = skinnedMesh.transform.parent;
+        
+        for (int j = 0; j < objectsToEnapsulateParent.childCount; j++)
+        {
+            var childToEncapsulate = objectsToEnapsulateParent.GetChild(j);
+            if (childToEncapsulate == skinnedMesh.transform)
+                continue;
+                
+            var point = skinnedMesh.transform.InverseTransformPoint(childToEncapsulate.transform.position);
+            newBound.Encapsulate(point);
+        }
+        
+        skinnedMeshes[i].localBounds = newBound;
+    }
+}
+```
+
+And there we go:
+[![geometry_improvements.png](/images/articles/deadlypremonition2/geometry_improvements.png)](/images/articles/deadlypremonition2/geometry_improvements.png)
+
+The only problem was that scripts used when rendering wires don't exactly have anything that could be hooked that is exacuted once, so instead I opted out to create a new game object, if the scene ends up being open world, which has a script that iterates over root objects in the scene and checks if it should be fixed and if so attaches a custom component that fixes it (which also gives me a way of knowing it was already fixed and shouldn't be fixed again). The check happens 1 game object per frame, to not introduce performance issues, so there is a slight chance, that if a chunk of terrain gets loaded, it will take a few seconds for the wires that player can see to be fixed.
+
+What I also did (although it wasn't a bug), which is part of geometry improvements option, is I modified characters LOD size, so they now get rendered at longer distance, before getting culled (as originally they were culled around 20 metres from the player and that is already on PCs LOD Bias being 2.0, meaning, the % of the screen they have to take is now a half of the original!).
+
+Not fixed geometry
+---
+Sadly it isn't the end of issues with geometry rendering with this game. One of the issues that are quite noticable is tree imposters that are rendered way too close to the camera and whilst the LOD Bias pushes them back, it seems that from a certain distance, regardless of settings imposters will be used. These imposters are just flat, low-resolution textured planes - they are extremely noticable, they don't cast any shadows and are something I was hoping to improve but I was not able to.
+
+[![incorrect_instanced_geometry.png](/images/articles/deadlypremonition2/incorrect_instanced_geometry.png)](/images/articles/deadlypremonition2/incorrect_instanced_geometry.png)
+
+The other element I was hoping to fix and I was able to was the way the game renders distance fances. For those, from a certain distance, it seems [Graphics.DrawMeshInstanced](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstanced.html) is used (as that's what Matrix4x4 arrays would indicate), which allow to render multiple instances of meshes without having to spawn that mesh in the world and communicate with GPU for each draw call. If I am correct, that probably means that the developers had some process developed for level designers that would generate Matrix4x4 arrays for each terrain chunk in places, where fences and walls were spawned. Unfortunetly, what seems to have happened, is that there was some bug with calculating their position and now, when they are used (only for distant models), all of their geometry is either somewhere off to the side or stuck in the ground. At the example above you can see a fence with pillars that is drawn correctly, using a mesh renderer and left of it - what I assume - is a mesh rendered with DrawMeshInstanced method, which ends up in the ground. Of course if you approach it, then it gets swapped to normal mesh renderer and is rendered exactly where it should be, but nevertheless it is noticable and it is a bug that developers left.
+
+There are also examples of terrain that is not connected between terrain chunks correctly, which causes gaps in geometry. This could possbily be fixed in runtime, if the developers were actually using terrain, but what this game does (despite me referring to terrain) is actually using mesh renderer. Unity has its terrain system - it had it for a very long time and that system does allow for setting up neighbours, to make sure terrain mesh doesn't fall appart in places where terrains connect with each other. And the developer used it, but instead of outputing it to a game, they opted out to use an external component that converts the terrain into a mesh - so not much I can do here.
+
+[![filtering.png](/images/articles/deadlypremonition2/filtering.png)](/images/articles/deadlypremonition2/filtering.png)
+
+There is also an issue with road textures. Which are low resolution and seem to be unfiltered. I could possibly replace those in runtime, if a good and free replacement were to be found.
+
+Options and lifting the game way past Switch limitations
+---
+I will try to keep this section short - god knows, I already have enough of writting this and I am not even done.
+
+One of the issues with this port is that it essentially gives not settings to the player, trying to use a fixed 1920x1080 resolution with a custom PC quality preset. Unity is a flexible engine and it can change settings at the fly and as such a huge part of my hack was exposing those settings to the player and making sure they get applied correctly.
+
+To allow for easy configuration, I used Unity's GUILayout, which is a part of Unity's ImGui module. This way, instead of having to design custom canvases and UI with options, I could just create a game object with a proper script and ImGui would automatically do the rest of the job, as I wrote which options to expose.
+
+First few options exposed were static settings under [QualitySettings](https://docs.unity3d.com/Manual/class-QualitySettings.html). These included:
+* Vsync count (and an option to set desired frame available if Vsync is disabled under Application.targetFrameRate).
+* Texture resolution (which allows for lowering the texture resolution by half on really weak machines)
+* Anisotropic settings
+* Shadow Resolution
+* Shadow Distance
+* Shadow Cascades amount and their distances (using 4 instead of 2 makes a massive difference)
+[![shadowcascades.png](/images/articles/deadlypremonition2/shadowcascades.png)](/images/articles/deadlypremonition2/shadowcascades.png)
+* LOD Bias (which pushes the distance at which LODs are getting switched or culled)
+
+After that, the next in line was trying to change the game's anti-aliasing. This a bit harder, as anti-aliasing in deferred rendering path has to be a post process or straight up super sampling (no MSAA allowed) and as such it is set seperatly for each camera assuming the camera has a [PostProcessLayer](https://docs.unity3d.com/Packages/com.unity.postprocessing@2.0/api/UnityEngine.Rendering.PostProcessing.PostProcessLayer.html) componenet attached.
+
+With that I could easily swap the game's default FXAA to way better SMAA or TAA (although the latter causes issues with one of the phantom shaders and as such I recommend not using it, especially if you are a person suffering from epylepsy) and since I already had a reference to a camera, also extend its far clip plane (although it doesn't do much due to the distance at which terrain chunks get loaded).
+
+The next step was finding a component used for ambient occlusion, writing code to hook it and allow player to change its settings as well. The game uses HBAO (Horizon Based Ambient Occlusion), but it is set by default to use Fastest profile, but for most PCs even its Highest setting won't be a problem. However it does affect the way it is calculated so I also exposed its intensity multiplayer, so users can adjust it.
+
+[![hbao.png](/images/articles/deadlypremonition2/hbao.png)](/images/articles/deadlypremonition2/hbao.png)
+
+Then I implemented an override for resolution of render textures used to create planar reflections, as the original resolution is 512x512 and can produce quite pixelated resolutions. The maximum resolution for planar reflections is now 2048x2048.
+
+[![planarreflections.png](/images/articles/deadlypremonition2/planarreflections.png)](/images/articles/deadlypremonition2/planarreflections.png)
+
+The next step was finding a way to hook Post Process Volume used by the camera and modify it, based on player needs. With this I was able to expose a "edge find" filter used, which can now be disabled by the player and screen space reflections, which can now be enabled and modified by the player to make quite a drastic difference in some scenes.
+
+[![ssr.png](/images/articles/deadlypremonition2/ssr.png)](/images/articles/deadlypremonition2/ssr.png)
+
+However, in some it doesn't make almost any difference at all, as it it dependent on materials used. It will also won't introduce any sort of water reflection, as builtin render pipeline has a limitation, where transparent surfaces can not receive SSR (or any depth based post process effect pretty much).
+
+Finally, as the last addition in my experiements, I decided to see what happens if you force shadows. This performance heavy option, that I named "Light Improvements" has 3 presets.
+* Disabled - which doesn't modify any lights and leaves them as it is
+* Minor - which adds shadows to York's flashlight
+* All - which adds shadows to all of the light sources used in closed scenes and adds shadows to vehicles during the night. At times, it also modifies some renderers to actually allow for casting shadows.
+[![light_improvements.png](/images/articles/deadlypremonition2/light_improvements.png)](/images/articles/deadlypremonition2/light_improvements.png)
+
+As a side note, I was experimenting with enabling shadows of lamps that are used at night, but the performance impact was too drastic and the result was glitchy, so I decided to leave open world light as it is.
+
+What should have been done when porting
+---
+Aside from at least some of the improvements made in my hack, which original port should have had by default, there are areas which I was able to improve. One - mentioned earlier being of course issues with tree imposters and fences at the distance, not to mention ground. The area needing most work - at least graphically in the game - is still open world.
+
+As mentioned earlier, if the developers have not opted out to convert all terrains to meshes and instead left them, there was a chance, their mesh could have been improved (in part thanks to Unity alone, increasing mesh density of terrain, when camera gets closer). Furthermore, some foliage really should have been added. Unity's terrain can populatate terrain with grass models and small bushes automatically, when paiting the terrain, so I assume it was originally there (at least at some point) and was cut for performance sake when making cuts for Nintendo Switch.
+
+A proper keyboard and mouse support on PC is pretty much a must, with a very few games (like [Brothers - A Tale of Two Sons](https://store.steampowered.com/app/225080/Brothers__A_Tale_of_Two_Sons/)) having any excuse to not provide it. DP2 is certainly not one of those games - we know a good keyboard and mouse support could have provided and with actual access to a source code - it would probably not take more than 2 weeks of single person's work.
+
+If anything, with my hack - I hope I managed to at least prove that Unity is a very flexible engine and drastic shortcomings that you usually see, are either the fault of developers or (more often than not) incussificent resources.
+
+And yes, I could have probably converted the camera to work in VR - but that would be stupid. See my [Art of Rally VR Hack](https://github.com/SuiMachine/Art-Of-Rally-VR-Hack) or [Raicuparta's guide](https://www.youtube.com/watch?v=Gt_kIrmTl44).
