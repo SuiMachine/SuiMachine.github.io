@@ -1,0 +1,81 @@
+---
+---
+.overlay-header
+{
+	font-size: 24px;
+	text-shadow: 2px 2px 8px #000000;
+	line-height: 160%;
+}
+
+.overlay-small
+{
+	font-size: 10px;
+	text-shadow: 2px 2px 8px #000000;
+}
+
+.projectbutton-icon
+{
+	vertical-align: top;
+	height: 100%;
+}
+
+.projectbutton:hover .projectbutton-overlay
+{
+	opacity: 1;
+	color: white;
+	text-align: center;
+}
+
+.projectbutton-overlay
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .8s;
+}
+
+.projectbutton {
+	position: relative;
+	padding: 2px 0;
+	color: black;
+    width: 100%;
+    height: 10%;
+    background: transparent;
+	float: left;
+}
+
+.gametable-container
+{
+	display: table;
+	width:	100%;
+}
+
+.gametable-container > a
+{
+	font-size: 22px;
+}
+
+
+.gametable-container
+{
+	display: table;
+	width:	100%;
+}
+
+@media (max-width: 600px)
+{
+	.gamebutton
+	{
+		width: 100%;
+	}
+}
+
+*, *:before, *:after
+{
+    box-sizing: inherit;
+}
