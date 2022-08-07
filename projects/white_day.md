@@ -19,4 +19,4 @@ And then normal walking also being broken around 240fps:
 
 **Note**: To see above images a web browser capable of displaying WebP images is required.
 
-Available at: [https://github.com/SuiMachine/White-Day---Sui-s-Hack](https://github.com/SuiMachine/White-Day---Sui-s-Hack)
+Source code and release available at: [https://github.com/SuiMachine/White-Day---Sui-s-Hack](https://github.com/SuiMachine/White-Day---Sui-s-Hack)

@@ -17,4 +17,4 @@ Here are some examples of it at work:
 For fun, I have also made some changes for the camera that can be enabled manually, although these changes are not recommended to be used:
 <center><iframe width="940" height="528" src="https://www.youtube.com/embed/WZlSnf4AgwI" frameborder="0" allowfullscreen></iframe></center>
 
-Available at: [https://github.com/SuiMachine/Art-Of-Rally-VR-Hack](https://github.com/SuiMachine/Art-Of-Rally-VR-Hack)
+Source code and release available at: [https://github.com/SuiMachine/Art-Of-Rally-VR-Hack](https://github.com/SuiMachine/Art-Of-Rally-VR-Hack)

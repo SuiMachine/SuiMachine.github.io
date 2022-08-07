@@ -20,4 +20,4 @@ After that I have proceeded to work on improving the game's graphics and eventua
 
 For my write up about the game's issues and how I proceeded to solve some of them, see: [Improving Deadly Premonition 2 using HarmonyX and MelonLoader](../../../2022/07/07/Improving_Deadly_Premonition_2_using_HarmonyX_and_MelonLoader.html) blog entry.
 
-Source code available at: [https://github.com/SuiMachine/Deadly-Premonition-2---Sui-s-hack](https://github.com/SuiMachine/Deadly-Premonition-2---Sui-s-hack)
+Source code and release available at: [https://github.com/SuiMachine/Deadly-Premonition-2---Sui-s-hack](https://github.com/SuiMachine/Deadly-Premonition-2---Sui-s-hack)
