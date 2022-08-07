@@ -1,7 +1,7 @@
 <a href="/projects/{{include.url}}">
 	<div class="projectbutton" onclick="loadDefaultValue('{{include.url}}')">
 		<img src="/projects/icons/{{include.url}}.jpg" class="projectbutton-icon">
-		<div class="projectbutton-overlay" style="background-color: {{include.color}}">
+		<div class="projectbutton-overlay" style="background-color: {{include.color}}; backdrop-filter: blur(4px);">
 			<div class="overlay-header">{{include.name}}</div>
 			<div class="overlay-small">{{include.description}}</div>
 		</div>
