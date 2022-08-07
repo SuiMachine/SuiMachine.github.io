@@ -17,4 +17,6 @@ Here are 2 examples of issues that appear with high-FPS - first off, crouching b
 And then normal walking also being broken around 240fps:
 ![images/white_day_240_walking.webp](../images/white_day_240_walking.webp)
 
+**Note**: To see above images a web browser capable of displaying WebP images is required.
+
 Available at: [https://github.com/SuiMachine/White-Day---Sui-s-Hack](https://github.com/SuiMachine/White-Day---Sui-s-Hack)
