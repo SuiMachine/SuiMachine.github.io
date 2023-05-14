@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "0451 Vault - Redfall (2023)"
+date:   2023-04-14 12:50:00 +0200
+categories: ["0451"]
+---
+Redfall is a game made by Arkane Austin - the developers of the fantastic Prey reboot (which wasn't even supposed to be a reboot) - and is a prime example of what you get when you decide that you don't really want to have a custom engine, and you don't want to have a team whose job it is to make sure that the engine can handle the project and what you're throwing at it, and instead decide to just go with the Unreal Engine, because it is an industry standard and therefore you have a sea of programmers and graphic artists who know how to add stuff to it and who will work for you at significantly lower wages, so you can - in theory - stuff your pockets with all those profits, except... what you end up with is a game with horrible performance (because getting Unreal Engine 4 to work with multithreading requires people who know a thing or two), horrible graphics, brain-dead AI, an empty city that doesn't give the player any freedom in how they approach their objectives, and that has no understanding of what the fuck an immersive sim is supposed to be, so it just throws 451 references pretty much anywhere it can without a care in the world. Just hollow and soulless.
+
+And since I can't be bothered, cause clearly something went really wrong with Redfall to a point, where everyone burnt out and could not be bothered eithered - here are some screenshots from Sinnoware that feature lazily put 451 references in this game: [https://twitter.com/Sinnoware/status/1653582901529960450](https://twitter.com/Sinnoware/status/1653582901529960450)
