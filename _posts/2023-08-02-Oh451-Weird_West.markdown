@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "0451 Vault - Weird West (2022)"
+date:   2023-04-14 13:40:00 +0100
+categories: ["0451"]
+---
+{% assign img0451 = "weird_west.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+With recent problems of Arkane, we've had yet another situation where veteran devs quit to try something on their own. The result of that is 2022's Weird West by newly formed WolfEye Studios - a very interesting immersive sim with an isometric camera perspective, which once again features good old 0451 easter egg around 1,5h into the game.
