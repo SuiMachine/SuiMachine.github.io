@@ -161,6 +161,7 @@ Games not finished (abandoned mid playthrough):
 * Abermore
 * Alone in the Dark (2008)
 * Blood West
+* Crysis 3
 * CTRL ALT EGO
 * Daymare 1998 (finished one act... I think)
 * Five Nights at Freddy's: Security Breach
