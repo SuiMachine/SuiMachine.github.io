@@ -87,6 +87,7 @@ Here are games I have finished on stream:
 * Postal: Brain Damaged
 * Priest Simulator
 * Project Downfall
+* Project Snowblind
 * Quake 2
 * Rainbow Six: Vegas 2
 * Red Faction
