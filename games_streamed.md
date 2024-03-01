@@ -9,6 +9,7 @@ Here are games I have finished on stream:
 * Aliens vs. Predator 2
 * Aliens: Colonial Marines
 * Aliens: The Dark Descent
+* Amnesia: The Bunker
 * Arabian Nights
 * Atomic Heart
 * Betrayer
@@ -98,6 +99,7 @@ Here are games I have finished on stream:
 * Resident Evil: Revelations 2
 * Return to castle: Wolfenstein
 * Rule of Rose
+* STAR WARS: Dark Forces Remaster
 * Saints Row (2022)
 * Security Booth
 * Severed Steel
