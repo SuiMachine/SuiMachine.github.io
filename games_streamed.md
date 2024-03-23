@@ -9,6 +9,7 @@ Here are games I have finished on stream:
 * Aliens vs. Predator 2
 * Aliens: Colonial Marines
 * Aliens: The Dark Descent
+* Alone in the Dark (2008)
 * Amnesia: The Bunker
 * Arabian Nights
 * Atomic Heart
@@ -60,6 +61,7 @@ Here are games I have finished on stream:
 * Hunt Down the Freman (2021 version?)
 * Hype: The Time Quest
 * Hyperviolent (Episode 1)
+* Industria
 * Infernal
 * Jazzpunk: Director's Cut
 * Judge Dredd: Dredd vs Death
@@ -98,8 +100,10 @@ Here are games I have finished on stream:
 * Resident Evil 6
 * Resident Evil: Revelations 2
 * Return to castle: Wolfenstein
+* RoboCop: Rogue City
 * Rule of Rose
 * STAR WARS: Dark Forces Remaster
+* STAR WARS: Episode I - The Phantom Menace
 * Saints Row (2022)
 * Security Booth
 * Severed Steel
@@ -162,9 +166,8 @@ Started on stream, finished off stream:
 
 Games not finished (abandoned mid playthrough):
 * Abermore
-* Alone in the Dark (2008)
 * Blood West
-* Crysis 3
+* Crysis 3 (not because it was bad - it's not)
 * CTRL ALT EGO
 * Daymare 1998 (finished one act... I think)
 * Five Nights at Freddy's: Security Breach
