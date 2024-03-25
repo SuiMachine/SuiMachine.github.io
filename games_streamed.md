@@ -104,6 +104,7 @@ Here are games I have finished on stream:
 * Rule of Rose
 * STAR WARS: Dark Forces Remaster
 * STAR WARS: Episode I - The Phantom Menace
+* STAR WARS: Episode III - Revenge of the Sith
 * Saints Row (2022)
 * Security Booth
 * Severed Steel
