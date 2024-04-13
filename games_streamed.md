@@ -29,8 +29,6 @@ Here are games I have finished on stream:
 * Cryostasis
 * Crysis 2
 * Cultic: Chapter One
-* DIRT: Origin of Species
-* DUSK
 * Dark Souls: Remastered
 * Dead Space
 * Dead Space (Remake)
@@ -40,7 +38,10 @@ Here are games I have finished on stream:
 * Deus Ex: Invisible War
 * Deus Ex: Mankind Divided
 * Deus Ex: The Fall
+* Devil May Cry 1 (HD Edition)
+* DIRT: Origin of Species
 * Dishonored
+* DUSK
 * Echoplex
 * Elderborn
 * Emergency 4
@@ -49,7 +50,6 @@ Here are games I have finished on stream:
 * Filcher
 * Ghost Recon: Future Soldier
 * Ghostwire: Tokyo
-* HROT
 * Half-Life 2 (in VR)
 * Half-Life 2: Episode One (in VR)
 * Half-Life: Alyx
@@ -58,6 +58,7 @@ Here are games I have finished on stream:
 * Hitman: Blood Money
 * Hitman: Contracts
 * Homefront: The Revolution
+* HROT
 * Hunt Down the Freman (2021 version?)
 * Hype: The Time Quest
 * Hyperviolent (Episode 1)
@@ -70,8 +71,8 @@ Here are games I have finished on stream:
 * Kingpin: Reloaded
 * Left Alive
 * Limbo of the Lost
-* Lost Ruins
 * Lost in Vivo
+* Lost Ruins
 * Metal Gear Rising: Revengeance
 * Metal Gear Solid 2
 * Metal Gear Solid 3
@@ -85,6 +86,7 @@ Here are games I have finished on stream:
 * Outlast
 * Overcast: Walden and the Werewolf
 * Pariah
+* Peter Jackson's King Kong: The Official Game of the Movie (Signature Edition)
 * Phantaruk
 * Postal 4: No Regerts
 * Postal: Brain Damaged
@@ -99,6 +101,7 @@ Here are games I have finished on stream:
 * Resident Evil 5
 * Resident Evil 6
 * Resident Evil: Revelations 2
+* Resistance: Fall of Man
 * Return to castle: Wolfenstein
 * RoboCop: Rogue City
 * Rule of Rose
@@ -108,6 +111,7 @@ Here are games I have finished on stream:
 * Saints Row (2022)
 * Security Booth
 * Severed Steel
+* Shenmue
 * Sherlock Holmes: The Awakened
 * Silent Hill 3
 * Silent Hill 4
@@ -122,6 +126,9 @@ Here are games I have finished on stream:
 * Splinter Cell: Pandora Tomorrow
 * Sprawl
 * Star Trek: Klingon Honor Guard
+* STAR WARS: Dark Forces Remaster
+* STAR WARS: Episode I - The Phantom Menace
+* Star Wars: Episode III - Revenge of the Sith
 * Starship Troopers
 * Superhot
 * Superhot VR
@@ -145,6 +152,7 @@ Here are games I have finished on stream:
 * Tunnel Rats
 * Turbo Overkill
 * Turok
+* Turok 2: Seeds of Evil
 * Turok 3: Shadow of Oblivion
 * Underworld Ascendant
 * Unforgiving - A Northern Hymn
