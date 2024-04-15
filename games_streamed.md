@@ -53,6 +53,7 @@ Here are games I have finished on stream:
 * Half-Life 2 (in VR)
 * Half-Life 2: Episode One (in VR)
 * Half-Life: Alyx
+* Heavy Metal F.A.K.K. 2
 * Hi-Fi Rush
 * Hitman: Absolution
 * Hitman: Blood Money
@@ -105,9 +106,6 @@ Here are games I have finished on stream:
 * Return to castle: Wolfenstein
 * RoboCop: Rogue City
 * Rule of Rose
-* STAR WARS: Dark Forces Remaster
-* STAR WARS: Episode I - The Phantom Menace
-* STAR WARS: Episode III - Revenge of the Sith
 * Saints Row (2022)
 * Security Booth
 * Severed Steel
@@ -128,7 +126,7 @@ Here are games I have finished on stream:
 * Star Trek: Klingon Honor Guard
 * STAR WARS: Dark Forces Remaster
 * STAR WARS: Episode I - The Phantom Menace
-* Star Wars: Episode III - Revenge of the Sith
+* STAR WARS: Episode III - Revenge of the Sith
 * Starship Troopers
 * Superhot
 * Superhot VR
