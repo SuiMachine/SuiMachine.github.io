@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "0451 Vault - Silent Hill 2 (2024)"
+date:   2024-10-12 12:00:00 +0200
+categories: ["0451"]
+---
+{% assign img0451 = "silent_hill_2_2024.jpg" %}
+[![{{ img0451 }}](/images/0451/{{ img0451 }})](/images/0451/{{ img0451 }})
+
+The Silent Hill 2 remake had a pretty high bar to clear. The original 2001 game is a cult classic, filled with complex narrative elements and not-so-obvious symbolism. The remake not only had to attract a new generation of fans, but also satisfy the vast majority of old ones with new content. Did it succeed? In my opinion, yes.
+
+One of the things it added, however, was a little digital safe puzzle at the motel, where one of the notes hides a well-known combination - 0451.
