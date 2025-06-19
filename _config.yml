@@ -8,8 +8,8 @@ description: > # this means to ignore newlines until "baseurl:"
   This whole page was made with Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://suimachine.github.io" # the base hostname & protocol for your site
-twitter_username: Suicide_pl
-twitch_username:  SuiMachine
+twitter_username: Sui_machine
+twitch_username:  Sui_VT
 pcgw_username:  Suicide_Machine
 
 # Build settings
