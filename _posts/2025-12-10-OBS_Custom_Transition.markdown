@@ -12,7 +12,8 @@ The original transition was suppose to be using sampling from scene A and B, log
 
 As a workaround, I was planning on looking up how to create hexagons using pixel shaders, however due to the debut being set in stone, I have eventually decided to just simplify it to a simple wave pattern (which I am not exactly happy with).
 
-<iframe width="920" height="520" src="http://www.youtube.com/embed/2xrZEjVzFks" frameborder="0" allowfullscreen></iframe>
+{% assign preview = "2025-12-11-TransitionPreview.png" %}
+[![{{ preview }}](/images/articles/{{ preview }})](https://www.youtube.com/watch?v=2xrZEjVzFks)
 If you want, you can always follow me on [Twitch](https://www.twitch.tv/sui_vt) or [YouTube](https://www.youtube.com/@Sui_VT).
 
 
