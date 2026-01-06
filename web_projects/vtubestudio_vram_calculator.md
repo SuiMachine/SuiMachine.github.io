@@ -6,7 +6,7 @@ permalink: web_projects/vts_calculator/
 ---
 The intention of this calculator is to help people realize how much VRAM their VTube Studio models are using. All you need is to provide a size of your texture atlas and the amount of texture atlasses used. 
 
-Texture size: (for 4:3 aspect ratio): <select name="texture_size" id="texture_size" onchange="calculateVRAMUSage();">
+Texture size: <select name="texture_size" id="texture_size" onchange="calculateVRAMUSage();">
     <option value="256">256</option>
     <option value="512">512</option>
     <option value="1024">1024</option>
