@@ -7,3 +7,4 @@ permalink: web_projects/
 * [Hooking Cheat Sheet](hooking_cheatsheet/)
 * [Mace Griffin Bounty Hunter FOV Calculator](mace_griffin_fov_calculator/)
 * [Vision Engine FOV Calculator](vision_fov_calculator/)
+* [VTube Studio VRAM usage calculator](vts_calculator/)
