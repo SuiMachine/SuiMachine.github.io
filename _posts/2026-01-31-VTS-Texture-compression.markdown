@@ -94,7 +94,7 @@ This is off topic a bit, but this also got me thinking on how PNG compression (d
 Now the question that I have in my head - what was the original source PNG compression and what made it load so fast. I guess it's also worth noting that PNG compression is lossless, but even best case (original texture) loads 8.53x slower with Unity's LoadImage than from DDS.
 
 ## Implementation issues
-My suggestion for implementation would be to implement support for BC1/BC3 and BC7. This isn't hard as the hardest part is reading DDS header and then telling Unity which Texture2D object to create based on it. However as far as I understand there are 2 things that need to be considered:
+My suggestion for implementation would be to implement support for BC1/BC3 and BC7. This isn't hard as the hardest part is reading DDS header and then telling Unity which Texture2D object to create based on it - this is likely done with [my code](https://github.com/SuiMachine/VTS-Memory-Compression/blob/main/DDS_Definition.cs), but I can't guarantee it's 100% flawless. However as far as I understand there are 2 things that need to be considered:
 * Mobile support and compatibility
 * VNet support
 
