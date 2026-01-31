@@ -43,6 +43,7 @@ My own model (shoutouts to Tsuno 💚):
   label-after="BC7 (0.67GB)"
   alt-before="RGBA32"
   alt-after="BC7"
+  unique-class="slider-1"
 %}
 2.66GB vs 0.67GB
 
@@ -50,10 +51,11 @@ Akari:
 {% include before-after.html
   before="/images/articles/vtubestudio_bc7/akari_rgba32.png"
   after="/images/articles/vtubestudio_bc7/akari_bc7.png"
-  label-before="RGBA32 (85.33 MB)"
+  label-before="RGBA32 (85.33MB)"
   label-after="BC7 (21.33MB)"
   alt-before="RGBA32"
   alt-after="BC7"
+  unique-class="slider-2"
 %}
 85.33 MB vs 21.33MB
 
@@ -67,6 +69,7 @@ Now to show you this isn't the same image, I have manually increased the size 4x
   label-after="BC7 (0.67GB)"
   alt-before="RGBA32"
   alt-after="BC7"
+  unique-class="slider-3"
 %}
 2.66GB vs 0.67GB
 

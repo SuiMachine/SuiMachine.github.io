@@ -1,14 +1,13 @@
-<div class="twentytwenty-container">
-  <img src="{{ include.before | relative_url }}" alt="{{ include.alt-before | default: 'Before image' }}" />
-  <img src="{{ include.after  | relative_url }}" alt="{{ include.alt-after  | default: 'After image' }}" />
+<div class="twentytwenty-container {{ include.unique-class | default: 'slider-default' }}">
+  <img src="{{ include.before | relative_url }}" alt="Before" />
+  <img src="{{ include.after  | relative_url }}" alt="After"  />
 </div>
 
 <script>
 $(window).on('load', function()
 {
-  $(".twentytwenty-container").twentytwenty({
+  $(".{{ include.unique-class | default: 'slider-default' }}").twentytwenty({
     default_offset_pct: 0.5,
-    orientation: 'horizontal',
     before_label: '{{ include.label-before | default: 'Before' }}',
     after_label:  '{{ include.label-after  | default: 'After' }}',
     no_overlay: false
