@@ -59,7 +59,7 @@ Akari:
 
 If you look real closely, especially with edges, you can notice a small difference, but tradeoff with BC7 is generally worth it.
 
-Now for additional 4x increase to prove the point:
+Now to show you this isn't the same image, I have manually increased the size 4x.
 {% include before-after.html
   before="/images/articles/vtubestudio_bc7/sui_rgba32_4x.png"
   after="/images/articles/vtubestudio_bc7/sui_bc7_4x.png"
@@ -70,7 +70,7 @@ Now for additional 4x increase to prove the point:
 %}
 2.66GB vs 0.67GB
 
-As you can see with a model of this pixel density, the trade off is very much not noticeable, but we are saving almost 2 GB of VRAM.
+As you can see with a model of this pixel density, the trade off is very much not noticeable, but we are saving almost 2 GB of VRAM!
 
 ## DDS vs PNG benchmarks
 My way of testing it is to do at least 5 different loads of textures of different resolution and calculate an average. I have done it inside of VTube Studio by hooking into the load function. These times are in seconds are rounded to 3 decimal places.
@@ -88,7 +88,7 @@ This is off topic a bit, but this also got me thinking on how PNG compression (d
 | ----------- | :----: | :----: | :----: | :----: |
 | Akari-4k    | 0.244s | 0.252s | 0.210s | 0.175s |
 
-Now the question that I have in my head - what was the original source PNG and what made it load so fast. I guess it's also worth noting that PNG compression is lossless, but even best case (original texture) loads 8.53x slower with Unity's LoadImage than from DDS.
+Now the question that I have in my head - what was the original source PNG compression and what made it load so fast. I guess it's also worth noting that PNG compression is lossless, but even best case (original texture) loads 8.53x slower with Unity's LoadImage than from DDS.
 
 ## Implementation issues
 My suggestion for implementation would be to implement support for BC1/BC3 and BC7. This isn't hard as the hardest part is reading DDS header and then telling Unity which Texture2D object to create based on it. However as far as I understand there are 2 things that need to be considered:
@@ -97,8 +97,8 @@ My suggestion for implementation would be to implement support for BC1/BC3 and B
 
 ### Mobile compatibility
 Here with my limited time I can only offer suggestions.
-1. Option 1 would be to do it in a similar way to my VTS-Memory-Compression hook, where VTube Studio checks whatever PNG file exists and once it is found, check whatever DDS file is present - if the latter is found, the latter is loaded, if not, PNG (or technically originally defined texture in json file) is loaded. With this approach, when sending a model to mobile application we can be sure that the file that the phone can handle is there (although that still doesn't prohibit sending a resolution that mobile phones can not handle - but this is an issue present currently as well). Another good thing about this approach is that we can be sure the user has access to original, lossless texture (you never can fully trust riggers) - BC1/BC3/BC7 are lossy after all.
-2. Option 2 and this is something to possibly explore, since I haven't been able to verify it is that it is possible that despite BC1/BC3/BC7 not being supported on mobile, they will get automatically decompressed by Unity anyway using software, as [Unity documentation implies it][BC7Mobile].
+1. **Option 1** would be to do it in a similar way to my VTS-Memory-Compression hook, where VTube Studio checks whatever PNG file exists and once it is found, check whatever DDS file is present - if the latter is found, the latter is loaded, if not, PNG (or technically originally defined texture in json file) is loaded. With this approach, when sending a model to mobile application we can be sure that the file that the phone can handle is there (although that still doesn't prohibit sending a resolution that mobile phones can not handle - but this is an issue present currently as well). Another good thing about this approach is that we can be sure the user has access to original, lossless texture (you never can fully trust riggers) - BC1/BC3/BC7 are lossy after all.
+2. **Option 2** and this is something to possibly explore, since I haven't been able to verify it - it's possible that despite BC1/BC3/BC7 not being supported on mobile, they will get automatically decompressed by Unity anyway using software, as [Unity documentation implies it][BC7Mobile]. But I personally think te first solution is safer.
 
 [BC7Mobile]: https://docs.unity3d.com/6000.3/Documentation/ScriptReference/TextureFormat.BC7.html
 
@@ -119,4 +119,16 @@ On a positive note after compressing DDS with Gzip the resulting size was smalle
 | Nepeta-8k   | 8.11MB | 5.13MB | 85.3MB | 5.99MB |
 | Akari-4k    | 7.03MB | 5.24MB | 21.3MB | 5.06MB |
 
-So worst case scenario, Gzipped texture is always better than all source textures I had. Bad news is that using PNG Compression on Level 9 results almost always in smaller files than Gzipped DDS.
+So worst case scenario, Gzipped texture is always smaller than all source textures I had. Bad news is that using PNG Compression on Level 9 results almost always in smaller files than Gzipped DDS, anyway.
+
+## Conclusion
+With how the things are nowadays, I believe DDS and BC7 offers significant advantages for VTubers who are limited to a single PC setup (which is vast majority of them) at almost no cost for the user (as long as the quality drop is not noticeable). Having used my own hook for VTube Studio I ***personally*** see it as a massive advantage for the users, which drastically reduces VRAM requirement of complex models, which then allows that VRAM space to be utilized by games instead, not to mention speeds up loadings of models!
+
+Of course ultimately the decision on whatever to implement it remains to Denchi. But with hardware prices nowadays and how hard it is to get a good deal on a new graphics card that has 16 GB of VRAM, this could help many VTubers that are limited to 8 GB or 12 GB graphics cards play more modern games or play those games with higher amount of details.
+
+## Sources and references
+* [https://github.com/SuiMachine/VTS-Memory-Compression](https://github.com/SuiMachine/VTS-Memory-Compression)
+* [https://www.reedbeta.com/blog/understanding-bcn-texture-compression-formats/](https://www.reedbeta.com/blog/understanding-bcn-texture-compression-formats/)
+* [https://www.connburanicz.com/block-compression-bc1-bc7](https://www.connburanicz.com/block-compression-bc1-bc7)
+* [https://www.gamedev.net/forums/topic/719663-are-there-any-hidden-costs-of-using-bc7-over-rgba32/](https://www.gamedev.net/forums/topic/719663-are-there-any-hidden-costs-of-using-bc7-over-rgba32/)
+* [https://learn.microsoft.com/en-US/windows/win32/direct3ddds/dx-graphics-dds](https://learn.microsoft.com/en-US/windows/win32/direct3ddds/dx-graphics-dds)
