@@ -4,13 +4,14 @@
 </div>
 
 <script>
-$(window).on('load', function(){  // Use 'load' to ensure images are sized properly
+$(window).on('load', function()
+{
   $(".twentytwenty-container").twentytwenty({
-    default_offset_pct: 0.5,       // Start position (0–1)
-    orientation: 'horizontal',     // or 'vertical'
+    default_offset_pct: 0.5,
+    orientation: 'horizontal',
     before_label: '{{ include.label-before | default: 'Before' }}',
     after_label:  '{{ include.label-after  | default: 'After' }}',
-    no_overlay: false              // Set to true to completely hide labels (no text at all)
+    no_overlay: false
   });
 });
 </script>
