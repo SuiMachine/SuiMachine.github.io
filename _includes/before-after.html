@@ -1,0 +1,16 @@
+<div class="twentytwenty-container">
+  <img src="{{ include.before | relative_url }}" alt="{{ include.alt-before | default: 'Before image' }}" />
+  <img src="{{ include.after  | relative_url }}" alt="{{ include.alt-after  | default: 'After image' }}" />
+</div>
+
+<script>
+$(window).on('load', function(){  // Use 'load' to ensure images are sized properly
+  $(".twentytwenty-container").twentytwenty({
+    default_offset_pct: 0.5,       // Start position (0–1)
+    orientation: 'horizontal',     // or 'vertical'
+    before_label: '{{ include.label-before | default: 'Before' }}',
+    after_label:  '{{ include.label-after  | default: 'After' }}',
+    no_overlay: false              // Set to true to completely hide labels (no text at all)
+  });
+});
+</script>
