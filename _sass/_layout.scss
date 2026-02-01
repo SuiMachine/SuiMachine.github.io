@@ -20,7 +20,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $brand-color;
     }
 }
 
@@ -100,6 +100,9 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+	background-color: rgba(0,0,0, 0.75);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
 .footer-heading {
@@ -167,8 +170,13 @@
 /**
  * Page content
  */
+.home {
+    padding: $spacing-unit/2 0;
+}
+ 
 .page-content {
     padding: $spacing-unit 0;
+	flex: 1 0 auto;
 }
 
 .page-heading {

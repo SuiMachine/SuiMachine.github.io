@@ -2,15 +2,15 @@
 # This whole page was made with Jekyll.
 
 # Site settings
-title: SuiMachine blog
+title: Sui's blog
 description: > # this means to ignore newlines until "baseurl:"
-  A GitHub blog of SuiMachine.
-  This whole page was made with Jekyll.
+  I rarely write in here, generally using it to collect references of 0451, but occasionally attempt to provide some suggestions on how to improve or fix games, using my limited knowledge. The OC and background images belong to me and are not to be used anywhere else.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://suimachine.github.io" # the base hostname & protocol for your site
 twitter_username: Sui_machine
 twitch_username:  Sui_VT
 pcgw_username:  Suicide_Machine
+youtube:  Sui_VT
 
 # Build settings
 markdown: kramdown

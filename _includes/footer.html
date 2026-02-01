@@ -1,13 +1,13 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+  <div class="wrapper-header">
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>I have no idea what am I doing.</li>
+          <li>A personal blog of Sui / SuiMachine - Unity programmer by day, hacker foxboy Vtuber who just wants to keep software running at night.</li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
@@ -41,6 +41,12 @@
 		  {% if site.pcgw_username %}
           <li>
             {% include icon-pcgw.html username=site.pcgw_username %}
+          </li>
+          {% endif %}
+		  
+		  {% if site.youtube %}
+          <li>
+            {% include icon-youtube.html username=site.youtube %}
           </li>
           {% endif %}
         </ul>
