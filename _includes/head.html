@@ -14,4 +14,17 @@
   <script src="{{ '/js/jquery.event.move.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/css/twentytwenty.css' | relative_url }}">
   <script src="{{ '/js/jquery.twentytwenty.js' | relative_url }}"></script>
+  <!-- Embeds Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.embed_thumbnail }}">
+  <!-- Embeds Open Graph-->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 160 }}">
+  <meta property="og:image" content="{{ page.embed_thumbnail | absolute_url }}">
+  <meta name="theme-color" content="#2ECC71">
 </head>
