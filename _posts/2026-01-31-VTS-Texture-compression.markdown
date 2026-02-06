@@ -3,6 +3,7 @@ layout: post
 title:  "VTube Texture Compression - why it should be implemented and what are its problems"
 date:   2026-01-31 10:00:00 +0200
 categories: ["BCn" ]
+embed_thumbnail: "image/thumbnails/2026-01-31-VTS-Texture-compression.png"
 ---
 
 This blog entry is written in a hope that it can convince Denchi to implement BCn texture compression into VTube Studio. It should hopefully gather all necessity keypoints in a single spot with a few references to external sources to prove the viability of BC7 texture compression in VTube Studio.
